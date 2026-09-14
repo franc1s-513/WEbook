@@ -189,14 +189,15 @@ const BookService = () => {
                 width: '38px',
                 height: '38px',
                 borderRadius: '50%',
-                background: isCurrent ? 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)' :
+                background: isCurrent ? 'linear-gradient(135deg, var(--primary) 0%, #047857 100%)' :
                             isDone ? 'var(--accent-emerald)' : 'rgba(255, 255, 255, 0.08)',
-                color: isCurrent || isDone ? '#030712' : 'var(--text-muted)',
+                color: isCurrent || isDone ? 'var(--royal-gold)' : 'var(--text-muted)',
+                border: isCurrent ? '1.5px solid var(--royal-gold)' : 'none',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontWeight: 700,
-                boxShadow: isCurrent ? '0 0 15px var(--primary-glow)' : 'none'
+                boxShadow: isCurrent ? '0 0 15px var(--royal-gold-glow)' : 'none'
               }}>
                 <Icon size={18} />
               </div>
@@ -237,18 +238,18 @@ const BookService = () => {
                     style={{
                       padding: '1.25rem',
                       borderRadius: 'var(--radius-sm)',
-                      background: isSelected ? 'rgba(6, 182, 212, 0.1)' : 'rgba(255,255,255,0.02)',
-                      border: isSelected ? '2px solid var(--primary)' : '1px solid var(--border-glass)',
+                      background: isSelected ? 'rgba(5, 150, 105, 0.18)' : 'rgba(255,255,255,0.02)',
+                      border: isSelected ? '2px solid var(--royal-gold)' : '1px solid var(--border-glass)',
                       cursor: 'pointer',
                       transition: 'all 0.2s',
-                      boxShadow: isSelected ? '0 0 15px var(--primary-glow)' : 'none'
+                      boxShadow: isSelected ? '0 0 15px var(--royal-gold-glow)' : 'none'
                     }}
                   >
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                       <span style={{ fontWeight: 700, fontSize: '1.1rem' }}>{v.year} {v.make} {v.model}</span>
-                      {isSelected && <CheckCircle2 size={20} color="var(--primary)" />}
+                      {isSelected && <CheckCircle2 size={20} color="var(--royal-gold)" />}
                     </div>
-                    <div style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 600 }}>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--royal-gold)', fontWeight: 600 }}>
                       Reg: {v.regNumber}
                     </div>
                     <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -285,14 +286,14 @@ const BookService = () => {
 
             {/* Running Total Indicator */}
             <div style={{
-              background: 'rgba(6, 182, 212, 0.1)',
-              border: '1px solid var(--primary)',
+              background: 'rgba(5, 150, 105, 0.15)',
+              border: '1.5px solid var(--royal-gold)',
               padding: '0.6rem 1.2rem',
               borderRadius: 'var(--radius-sm)',
               textAlign: 'right'
             }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Selected ({selectedServiceIds.length})</div>
-              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--primary)' }}>${totalAmount}</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--royal-gold)', textTransform: 'uppercase' }}>Selected ({selectedServiceIds.length})</div>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--royal-gold)' }}>${totalAmount}</div>
             </div>
           </div>
 
@@ -309,9 +310,9 @@ const BookService = () => {
                   fontSize: '0.82rem',
                   fontWeight: 500,
                   whiteSpace: 'nowrap',
-                  background: selectedCategory === cat ? 'var(--primary)' : 'rgba(255, 255, 255, 0.05)',
-                  color: selectedCategory === cat ? '#030712' : 'var(--text-secondary)',
-                  border: '1px solid var(--border-glass)'
+                  background: selectedCategory === cat ? 'var(--royal-gold)' : 'rgba(212, 175, 55, 0.08)',
+                  color: selectedCategory === cat ? '#041d13' : 'var(--text-secondary)',
+                  border: selectedCategory === cat ? '1px solid var(--royal-gold)' : '1px solid var(--border-glass)'
                 }}
               >
                 {cat}
@@ -330,17 +331,18 @@ const BookService = () => {
                   style={{
                     padding: '1.25rem',
                     borderRadius: 'var(--radius-sm)',
-                    background: isSelected ? 'rgba(6, 182, 212, 0.1)' : 'rgba(255,255,255,0.02)',
-                    border: isSelected ? '2px solid var(--primary)' : '1px solid var(--border-glass)',
+                    background: isSelected ? 'rgba(5, 150, 105, 0.18)' : 'rgba(255,255,255,0.02)',
+                    border: isSelected ? '2px solid var(--royal-gold)' : '1px solid var(--border-glass)',
                     cursor: 'pointer',
                     transition: 'all 0.2s',
+                    boxShadow: isSelected ? '0 0 15px var(--royal-gold-glow)' : 'none',
                     display: 'flex',
                     flexDirection: 'column'
                   }}
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
                     <span className="badge badge-confirmed" style={{ fontSize: '0.7rem' }}>{svc.category}</span>
-                    <span style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--primary)' }}>${svc.price}</span>
+                    <span style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--royal-gold)' }}>${svc.price}</span>
                   </div>
 
                   <h3 style={{ fontSize: '1.05rem', marginBottom: '0.4rem' }}>{svc.name}</h3>
@@ -352,7 +354,7 @@ const BookService = () => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                       <Clock size={13} /> {svc.durationMinutes} mins
                     </div>
-                    <span style={{ fontWeight: 600, color: isSelected ? 'var(--primary)' : 'var(--text-secondary)' }}>
+                    <span style={{ fontWeight: 600, color: isSelected ? 'var(--royal-gold)' : 'var(--text-secondary)' }}>
                       {isSelected ? '✓ Selected' : '+ Select'}
                     </span>
                   </div>
@@ -445,15 +447,16 @@ const BookService = () => {
                         padding: '1rem',
                         borderRadius: 'var(--radius-sm)',
                         textAlign: 'left',
-                        background: isSelected ? 'rgba(6, 182, 212, 0.15)' :
-                                    isAvailable ? 'rgba(255,255,255,0.03)' : 'rgba(255,255,255,0.01)',
-                        border: isSelected ? '2px solid var(--primary)' : '1px solid var(--border-glass)',
+                        background: isSelected ? 'rgba(5, 150, 105, 0.25)' :
+                                    isAvailable ? 'rgba(212, 175, 55, 0.04)' : 'rgba(255,255,255,0.01)',
+                        border: isSelected ? '2px solid var(--royal-gold)' : '1px solid var(--border-glass)',
                         opacity: isAvailable ? 1 : 0.4,
                         cursor: isAvailable ? 'pointer' : 'not-allowed',
-                        transition: 'all 0.2s'
+                        transition: 'all 0.2s',
+                        boxShadow: isSelected ? '0 0 12px var(--royal-gold-glow)' : 'none'
                       }}
                     >
-                      <div style={{ fontWeight: 600, fontSize: '0.95rem', color: isSelected ? 'var(--primary)' : 'var(--text-primary)' }}>
+                      <div style={{ fontWeight: 600, fontSize: '0.95rem', color: isSelected ? 'var(--royal-gold)' : 'var(--text-primary)' }}>
                         {slot.timeSlot}
                       </div>
                       <div style={{ fontSize: '0.75rem', marginTop: '0.3rem', color: isAvailable ? 'var(--accent-emerald)' : 'var(--accent-rose)' }}>
@@ -546,11 +549,12 @@ const BookService = () => {
                   padding: '1rem',
                   borderRadius: 'var(--radius-sm)',
                   cursor: 'pointer',
-                  background: paymentMethod === 'online' ? 'rgba(6, 182, 212, 0.1)' : 'rgba(255,255,255,0.02)',
-                  border: paymentMethod === 'online' ? '2px solid var(--primary)' : '1px solid var(--border-glass)'
+                  background: paymentMethod === 'online' ? 'rgba(5, 150, 105, 0.2)' : 'rgba(255,255,255,0.02)',
+                  border: paymentMethod === 'online' ? '2px solid var(--royal-gold)' : '1px solid var(--border-glass)',
+                  boxShadow: paymentMethod === 'online' ? '0 0 12px var(--royal-gold-glow)' : 'none'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, color: paymentMethod === 'online' ? 'var(--primary)' : 'inherit' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, color: paymentMethod === 'online' ? 'var(--royal-gold)' : 'inherit' }}>
                   <CreditCard size={18} /> Pay Online Now (Card / UPI)
                 </div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -564,11 +568,12 @@ const BookService = () => {
                   padding: '1rem',
                   borderRadius: 'var(--radius-sm)',
                   cursor: 'pointer',
-                  background: paymentMethod === 'cash' ? 'rgba(6, 182, 212, 0.1)' : 'rgba(255,255,255,0.02)',
-                  border: paymentMethod === 'cash' ? '2px solid var(--primary)' : '1px solid var(--border-glass)'
+                  background: paymentMethod === 'cash' ? 'rgba(5, 150, 105, 0.2)' : 'rgba(255,255,255,0.02)',
+                  border: paymentMethod === 'cash' ? '2px solid var(--royal-gold)' : '1px solid var(--border-glass)',
+                  boxShadow: paymentMethod === 'cash' ? '0 0 12px var(--royal-gold-glow)' : 'none'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, color: paymentMethod === 'cash' ? 'var(--primary)' : 'inherit' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, color: paymentMethod === 'cash' ? 'var(--royal-gold)' : 'inherit' }}>
                   <CheckCircle2 size={18} /> Pay at Service Center
                 </div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px' }}>

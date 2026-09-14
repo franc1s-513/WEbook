@@ -43,9 +43,9 @@ const Home = () => {
           gap: '0.5rem',
           padding: '0.4rem 1rem',
           borderRadius: 'var(--radius-full)',
-          background: 'rgba(6, 182, 212, 0.1)',
-          border: '1px solid rgba(6, 182, 212, 0.3)',
-          color: 'var(--primary)',
+          background: 'rgba(5, 150, 105, 0.15)',
+          border: '1px solid var(--royal-gold)',
+          color: 'var(--royal-gold)',
           fontSize: '0.85rem',
           fontWeight: 600,
           marginBottom: '1.5rem'
@@ -113,16 +113,16 @@ const Home = () => {
 
         <div className="grid-4">
           <div className="glass-card" style={{ position: 'relative' }}>
-            <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'rgba(6, 182, 212, 0.2)', position: 'absolute', top: '10px', right: '15px' }}>01</div>
-            <h3 style={{ fontSize: '1.15rem', marginBottom: '0.5rem', color: 'var(--primary)' }}>Add Vehicle</h3>
+            <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'rgba(212, 175, 55, 0.25)', position: 'absolute', top: '10px', right: '15px' }}>01</div>
+            <h3 style={{ fontSize: '1.15rem', marginBottom: '0.5rem', color: 'var(--royal-gold)' }}>Add Vehicle</h3>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
               Save your car details once (make, model, year, license plate) for fast repeat bookings.
             </p>
           </div>
 
           <div className="glass-card" style={{ position: 'relative' }}>
-            <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'rgba(99, 102, 241, 0.2)', position: 'absolute', top: '10px', right: '15px' }}>02</div>
-            <h3 style={{ fontSize: '1.15rem', marginBottom: '0.5rem', color: 'var(--secondary)' }}>Choose Services</h3>
+            <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'rgba(5, 150, 105, 0.3)', position: 'absolute', top: '10px', right: '15px' }}>02</div>
+            <h3 style={{ fontSize: '1.15rem', marginBottom: '0.5rem', color: 'var(--primary-light)' }}>Choose Services</h3>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
               Select from oil flushes, laser alignment, AC overhauls, or comprehensive checks with transparent pricing.
             </p>
@@ -163,7 +163,7 @@ const Home = () => {
             <div key={svc._id} className="glass-card glass-card-hover" style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
                 <span className="badge badge-confirmed">{svc.category}</span>
-                <span style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--primary)' }}>
+                <span style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--royal-gold)' }}>
                   ${svc.price}
                 </span>
               </div>
