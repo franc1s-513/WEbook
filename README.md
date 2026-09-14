@@ -87,5 +87,28 @@ WEbook/
 
 ---
 
+## 🎨 Theme & Styling
+- **Primary Color:** Royal Green (`#059669` / `#047857`)
+- **Outline & Accent Color:** Royal Gold (`#d4af37` / `#fde047`)
+- **Aesthetic:** Luxury glassmorphism with golden outlines, glowing indicators, and fluid transitions.
+
+---
+
+## ☁️ Cloud Deployment
+
+### Deploy Frontend on Vercel
+1. Go to [Vercel](https://vercel.com) and click **"Add New Project"**.
+2. Select your repository: `https://github.com/franc1s-513/WEbook`.
+3. Set **Root Directory** to `frontend` (or leave default root, as [vercel.json](vercel.json) is pre-configured).
+4. Click **Deploy**. Vercel will automatically build and publish your SPA.
+
+### Deploy Backend & Frontend on Render
+1. Go to [Render Dashboard](https://dashboard.render.com).
+2. Click **"New"** → **"Blueprint"**.
+3. Connect your repository `https://github.com/franc1s-513/WEbook`.
+4. Render will read [render.yaml](render.yaml) and automatically provision both the Node.js backend web service and the frontend static website.
+
+---
+
 ## 📜 License
 Licensed under the MIT License.
